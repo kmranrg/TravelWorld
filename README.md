@@ -1,0 +1,2 @@
+# Telusko
+a Django project
