@@ -1,2 +1,2 @@
-# Telusko
+# TravelWorld
 a Django project
