@@ -1,10 +1,8 @@
 {% load static %}
-{% static "images" as baseUrl %}
 
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/travello/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Oct 2020 12:10:12 GMT -->
 <head>
 <title>Travello</title>
 <meta charset="utf-8">
@@ -256,7 +254,7 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{{baseUrl}}/{{dest.image}}" alt="">
+								<img src="{{dest.img.url}}" alt="">
 								{% if dest.offer %}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 								{% endif %}
@@ -510,7 +508,7 @@
 			</div>
 		</div>
 		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://instagram.com/kmranrg" target="_blank">Kumar Anurag</a> | Credits:<a href="https://colorlib.com/" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
 	</footer>
 </div>
@@ -538,5 +536,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 </body>
 
-<!-- Mirrored from preview.colorlib.com/theme/travello/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Oct 2020 12:11:30 GMT -->
 </html>
