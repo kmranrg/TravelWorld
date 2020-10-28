@@ -51,3 +51,12 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def news(request):
+    return render(request, 'news.html')
