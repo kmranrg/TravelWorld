@@ -29,11 +29,13 @@
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-							<div class="logo"><a href="index-2.html">Travello</a></div>
+							<div class="logo"><a href="">Travel World</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li class="active"><a href="">Home</a></li>
+									<li><a href="accounts/about">About Us</a></li>
+									<li><a href="accounts/news">News</a></li>
+									<li><a href="accounts/contact">Contact</a></li>
 
 									{% if user.is_authenticated %}
 										<li><a href="accounts/logout">Logout</a></li>
@@ -46,7 +48,11 @@
 							{% if user.is_authenticated %}
 								<div class="header_phone ml-auto">Welcome, {{user.first_name}}</div>
 							{% else %}
-								<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
+								<div class="header_phone ml-auto">
+									<a style="color: white; font-size:xx-large;" href="https://www.instagram.com/kmranrg/" target="_blank">
+										<i class="fa fa-instagram" aria-hidden="false"></i>
+									</a>
+								</div>
 							{% endif %}
 
 							<!-- Hamburger -->
@@ -76,28 +82,38 @@
 
 	<div class="menu">
 		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
-			<div class="menu_logo"><a href="index-2.html">Travello</a></div>
+			<div class="menu_logo"><a href="">Travel World</a></div>
 			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
 		</div>
 		<div class="menu_content">
 			<ul>
-				<li><a href="inex.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="news.html">News</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li class="active"><a href="">Home</a></li>
+				<li><a href="accounts/about">About Us</a></li>
+				<li><a href="accounts/news">News</a></li>
+				<li><a href="accounts/contact">Contact</a></li>
+
+				{% if user.is_authenticated %}
+					<li><a href="accounts/logout">Logout</a></li>
+				{% else %}
+					<li><a href="accounts/register">Register</a></li>
+					<li><a href="accounts/login">Login</a></li>
+				{% endif %}
 			</ul>
 		</div>
 		<div class="menu_social">
-			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
-			<ul class="d-flex flex-row align-items-start justify-content-start">
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			</ul>
+			{% if user.is_authenticated %}
+				<div class="menu_phone ml-auto">Logged in: {{user.first_name}} {{user.last_name}}</div>
+			{% else %}
+				<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+				<ul class="d-flex flex-row align-items-start justify-content-start">
+					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			{% endif %}
 		</div>
 	</div>
 	
@@ -460,7 +476,7 @@
 									<div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
 									<div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
 								</div>
-								<div><button class="newsletter_button">subscribe</button></div>
+								<div><button style="background-color: brown;" class="newsletter_button">subscribe</button></div>
 							</form>
 						</div>
 					</div>
@@ -515,8 +531,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://instagram.com/kmranrg" target="_blank">Kumar Anurag</a> | Credits:<a href="https://colorlib.com/" target="_blank">Colorlib</a>
+		<div style="background-color: black;" class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://instagram.com/kmranrg" target="_blank">Kumar Anurag</a> | Credits:<a href="https://colorlib.com/" target="_blank"> Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
 	</footer>
 </div>
