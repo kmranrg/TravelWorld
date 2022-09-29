@@ -1,0 +1,5 @@
+1) Installing the Postgres and enabling it in the background
+2) We will go to telusko\settings.py in the project folder
+3) Around line 78, there's DATABASES dictionary, we will set the value for keys ('NAME', 'USER' & 'PASSWORD') to 'postgres'
+4) Then we'll execute `python3 manage.py makemigrations` & `python3 manage.py migrate`
+5) Finally, we will run the project by `python3 manage.py runserver`
